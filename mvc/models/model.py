@@ -2,8 +2,8 @@
 NOMBRE: Maria del Carmen Hernandez Diaz
 ACCOUNT: 1718110389
 GROUP: TIC 51
-DATE: 19-07-2020
-DESCRIPTION: Uso de la arquitectura MVC. Formulario HTML5, haciendo uso de Bulma y Web.py, muestra los archivos insertados en list.html
+DATE: 09-08-2020
+DESCRIPTION: Update and delete objetive
 '''
 import mysql.connector
 
@@ -138,7 +138,7 @@ class Alumnos():
 
 objeto = Alumnos()
 objeto.connect()
-#objeto.modificar(7, 123567,'Melanie', 'Kaplan', 'Armstrong', 19, '2000-10-10', 'Femenino', 'Soltero'),
+objeto.modificar(7, 123423567,'Melanie', 'Kaplan', 'Armstrong', 19, '2000-10-10', 'Femenino', 'Soltero'),
 
 #for row in objeto.select():
 #    print(row)

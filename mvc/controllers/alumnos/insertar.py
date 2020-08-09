@@ -6,13 +6,12 @@ model_alumnos = model.Alumnos()
 
 render = web.template.render("mvc/views/alumnos/")
 
-
 ''' 
 NOMBRE: Maria del Carmen Hernandez Diaz
 ACCOUNT: 1718110389
 GROUP: TIC 51
-DATE: 19-07-2020
-DESCRIPTION: Uso de la arquitectura MVC. Formulario HTML5, haciendo uso de Bulma y Web.py, muestra los archivos insertados en list.html
+DATE: 09-08-2020
+DESCRIPTION: Update and delete objetive
 '''
 
 class Insertar():

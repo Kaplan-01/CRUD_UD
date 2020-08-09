@@ -1,10 +1,12 @@
 $def with(result)
 
-<!-- NOMBRE: Maria del Carmen Hernandez Diaz
+<!--  
+NOMBRE: Maria del Carmen Hernandez Diaz
 ACCOUNT: 1718110389
 GROUP: TIC 51
-DATE: 19-07-2020
-DESCRIPTION: Uso de la arquitectura MVC. Formulario HTML5, haciendo uso de Bulma y Web.py, muestra los archivos insertados en list.html-->
+DATE: 09-08-2020
+DESCRIPTION: Update and delete objetive
+-->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -81,6 +83,7 @@ DESCRIPTION: Uso de la arquitectura MVC. Formulario HTML5, haciendo uso de Bulma
     </nav>
 
 
+
     <div class="tabs is-centered is-boxed is-large">
       <ul>
         <li>
@@ -90,7 +93,7 @@ DESCRIPTION: Uso de la arquitectura MVC. Formulario HTML5, haciendo uso de Bulma
           </a>
         </li>
 
-        <li>
+        <!--li>
           <a href="http://localhost:8080/borrar">
               <span class=""><i class="" aria-hidden="true"></i></span>
             <span>Borrar</span>
@@ -102,10 +105,11 @@ DESCRIPTION: Uso de la arquitectura MVC. Formulario HTML5, haciendo uso de Bulma
               <span class=""><i class="" aria-hidden="true"></i></span>
               <!--Liga para obtener el nombre de los iconos:
                   https://fontawesome.com/icons?from=io
-                  <span class=""><i class="fas fas fa-fw fa-edit icon is-small" aria-hidden="true"></i></span>-->
+                  <span class=""><i class="fas fas fa-fw fa-edit icon is-small" aria-hidden="true"></i></span>
             <span>Modificar</span>
           </a>
-        </li>
+        </li>-->
+      
 
         <li>
           <a href="http://localhost:8080/list">
@@ -113,8 +117,11 @@ DESCRIPTION: Uso de la arquitectura MVC. Formulario HTML5, haciendo uso de Bulma
             <span>Lista alumnos</span>
           </a>
         </li>
+
      </ul>
     </div>
+
+
   </strong>
 
 </section>
@@ -155,40 +162,40 @@ DESCRIPTION: Uso de la arquitectura MVC. Formulario HTML5, haciendo uso de Bulma
                         <p class="title">Estudiante.</p>
 
                         <br>
-                        <label>Identificador:</label>
-                        <input type="text" for="id_alumno" class="input is-danger" readonly value="$result['id_alumno']">
+                        <label for="id_alumno">Identificador:</label>
+                        <input id="id_alumno" name="id_alumno" type="number" class="input is-danger" readonly value="$result['id_alumno']">
 
                         <br>
-                        <label>Matricula:</label>
-                        <input type="text" for="matricula" class="input is-danger" required value="$result['matricula']">
+                        <label for="matricula">Matricula:</label>
+                        <input id="matricula" name="matricula" type="number" class="input is-danger" required value="$result['matricula']">
 
                         <br>
-                        <label>Nombre:</label>
-                        <input type="text" for="nombre" class="input is-danger" required value="$result['nombre']">
+                        <label for="nombre">Nombre:</label>
+                        <input id="nombre" name="nombre" type="text" class="input is-danger" required value="$result['nombre']">
 
                         <br>
-                        <label>Primer Apellido:</label>
-                        <input type="text" for="primer_apellido" class="input is-danger" required value="$result['primer_apellido']">
+                        <label for="primer_apellido">Primer Apellido:</label>
+                        <input id="primer_apellido" name="primer_apellido" type="text" class="input is-danger" required value="$result['primer_apellido']">
 
                         <br>
-                        <label>Segundo Apellido:</label>
-                        <input type="text" for="segundo_apellido" class="input is-danger" required value="$result['segundo_apellido']">
+                        <label for="segundo_apellido">Segundo Apellido:</label>
+                        <input id="segundo_apellido" name="segundo_apellido" type="text" class="input is-danger" required value="$result['segundo_apellido']">
 
                         <br>
-                        <label>Edad:</label>
-                        <input type="text" for="edad" class="input is-danger" required value="$result['edad']">
+                        <label for="edad">Edad:</label>
+                        <input id="edad" name="edad" type="number" class="input is-danger" required value="$result['edad']">
 
                         <br>
-                        <label>Nacimiento:</label>
-                        <input type="text" for="fecha_nacimiento" class="input is-danger" required value="$result['fecha_nacimiento']">
+                        <label for="fecha_nacimiento">Nacimiento:</label>
+                        <input id="fecha_nacimiento" name="fecha_nacimiento" type="date" class="input is-danger" required value="$result['fecha_nacimiento']">
 
                         <br>
-                        <label>Sexo:</label>
-                        <input type="text" for="sexo" class="input is-danger" required value="$result['sexo']">
+                        <label for="sexo">Sexo:</label>
+                        <input id="sexo" name="sexo" type="text" class="input is-danger" required value="$result['sexo']">
 
                         <br>
-                        <label>Estado Civil:</label>
-                        <input type="text" for="estado" class="input is-danger" required value="$result['estado']">
+                        <label for="estado">Estado Civil:</label>
+                        <input id="estado" name="estado" type="text" class="input is-danger" required value="$result['estado']">
                         <br>
 
                         <button class="button is-warning is-focused is-large" type="submit">Actualizar</button>
@@ -241,5 +248,4 @@ DESCRIPTION: Uso de la arquitectura MVC. Formulario HTML5, haciendo uso de Bulma
         </p>
     </nav>
 </footer>
-
 </html>
