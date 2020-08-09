@@ -1,0 +1,235 @@
+$def with(result)
+
+<!-- NOMBRE: Maria del Carmen Hernandez Diaz
+ACCOUNT: 1718110389
+GROUP: TIC 51
+DATE: 19-07-2020
+DESCRIPTION: Uso de la arquitectura MVC. Formulario HTML5, haciendo uso de Bulma y Web.py, muestra los archivos insertados en list.html-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ETIQUETAS REQUERIDAS -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- OBTENCION DE ESTILOS - BULMA -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+    <title>Profile</title>
+</head>
+
+<!-- HERO DEGRADADO - ENCABEZADO -->
+
+<section class="hero is-fullwidth is-danger is-family-monospace is-bold">
+    <nav class="hero-body">
+        <nav class="field is-grouped">
+            <!-- CLASE QUE PERMITE QUE LOS ELEMENTOS ESTEN JUNTOS EN FORMA DE FILA -->
+
+            <figure class="image is-128x128">
+                <img
+                    src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9c64cfe3-bb3b-4ae8-b5a6-d2f39d21ff87/d3jme6i-8c702ad4-4b7a-4763-9901-99f8b4f038b0.png/v1/fill/w_600,h_400,strp/fondo_transparente_png_by_imsnowbieber_d3jme6i-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD00MDAiLCJwYXRoIjoiXC9mXC85YzY0Y2ZlMy1iYjNiLTRhZTgtYjVhNi1kMmYzOWQyMWZmODdcL2Qzam1lNmktOGM3MDJhZDQtNGI3YS00NzYzLTk5MDEtOTlmOGI0ZjAzOGIwLnBuZyIsIndpZHRoIjoiPD02MDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.2JrgW8AXhfVCeL3tOxOnIhsWLlL5MTuntOq0HfeK6CA">
+            </figure>
+            <figure class="image is-128x128">
+                <img
+                    src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9c64cfe3-bb3b-4ae8-b5a6-d2f39d21ff87/d3jme6i-8c702ad4-4b7a-4763-9901-99f8b4f038b0.png/v1/fill/w_600,h_400,strp/fondo_transparente_png_by_imsnowbieber_d3jme6i-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD00MDAiLCJwYXRoIjoiXC9mXC85YzY0Y2ZlMy1iYjNiLTRhZTgtYjVhNi1kMmYzOWQyMWZmODdcL2Qzam1lNmktOGM3MDJhZDQtNGI3YS00NzYzLTk5MDEtOTlmOGI0ZjAzOGIwLnBuZyIsIndpZHRoIjoiPD02MDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.2JrgW8AXhfVCeL3tOxOnIhsWLlL5MTuntOq0HfeK6CA">
+            </figure>
+
+            <!-- TEXTO DE BIENVENIDA, SIZE 1 TIPO: PARRAFO -->
+
+            <p class="is-size-1 has-text-weight-bold is-family-monospace has-text-white has-text-centered">Kaplan.
+            </p>
+
+            <!-- TEXTO DE EMPRESA, TIPO: H5 -->
+
+            <h5 class="title is-5">Profile</h5>
+
+
+            <!-- LINKS IMAGENES USADAS -->
+
+            <figure class="image is-128x128">
+                <img
+                    src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9c64cfe3-bb3b-4ae8-b5a6-d2f39d21ff87/d3jme6i-8c702ad4-4b7a-4763-9901-99f8b4f038b0.png/v1/fill/w_600,h_400,strp/fondo_transparente_png_by_imsnowbieber_d3jme6i-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD00MDAiLCJwYXRoIjoiXC9mXC85YzY0Y2ZlMy1iYjNiLTRhZTgtYjVhNi1kMmYzOWQyMWZmODdcL2Qzam1lNmktOGM3MDJhZDQtNGI3YS00NzYzLTk5MDEtOTlmOGI0ZjAzOGIwLnBuZyIsIndpZHRoIjoiPD02MDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.2JrgW8AXhfVCeL3tOxOnIhsWLlL5MTuntOq0HfeK6CA">
+            </figure>
+            <figure class="image is-128x128 is-3by1">
+                <img class="is-rounded"
+                    src="https://images.pexels.com/photos/4618513/pexels-photo-4618513.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+            </figure>
+            <figure class="image is-32x32">
+                <img
+                    src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9c64cfe3-bb3b-4ae8-b5a6-d2f39d21ff87/d3jme6i-8c702ad4-4b7a-4763-9901-99f8b4f038b0.png/v1/fill/w_600,h_400,strp/fondo_transparente_png_by_imsnowbieber_d3jme6i-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD00MDAiLCJwYXRoIjoiXC9mXC85YzY0Y2ZlMy1iYjNiLTRhZTgtYjVhNi1kMmYzOWQyMWZmODdcL2Qzam1lNmktOGM3MDJhZDQtNGI3YS00NzYzLTk5MDEtOTlmOGI0ZjAzOGIwLnBuZyIsIndpZHRoIjoiPD02MDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.2JrgW8AXhfVCeL3tOxOnIhsWLlL5MTuntOq0HfeK6CA">
+            </figure>
+            <figure class="image is-128x128 is-3by1">
+                <img class="is-rounded"
+                    src="https://images.pexels.com/photos/1909830/pexels-photo-1909830.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+            </figure>
+            <figure class="image is-32x32">
+                <img
+                    src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9c64cfe3-bb3b-4ae8-b5a6-d2f39d21ff87/d3jme6i-8c702ad4-4b7a-4763-9901-99f8b4f038b0.png/v1/fill/w_600,h_400,strp/fondo_transparente_png_by_imsnowbieber_d3jme6i-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD00MDAiLCJwYXRoIjoiXC9mXC85YzY0Y2ZlMy1iYjNiLTRhZTgtYjVhNi1kMmYzOWQyMWZmODdcL2Qzam1lNmktOGM3MDJhZDQtNGI3YS00NzYzLTk5MDEtOTlmOGI0ZjAzOGIwLnBuZyIsIndpZHRoIjoiPD02MDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.2JrgW8AXhfVCeL3tOxOnIhsWLlL5MTuntOq0HfeK6CA">
+            </figure>
+            <figure class="image is-128x128 is-3by1">
+                <img class="is-rounded"
+                    src="https://images.pexels.com/photos/2440296/pexels-photo-2440296.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+            </figure>
+        </nav>
+        <figure class="image is-32x32">
+            <img
+                src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9c64cfe3-bb3b-4ae8-b5a6-d2f39d21ff87/d3jme6i-8c702ad4-4b7a-4763-9901-99f8b4f038b0.png/v1/fill/w_600,h_400,strp/fondo_transparente_png_by_imsnowbieber_d3jme6i-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD00MDAiLCJwYXRoIjoiXC9mXC85YzY0Y2ZlMy1iYjNiLTRhZTgtYjVhNi1kMmYzOWQyMWZmODdcL2Qzam1lNmktOGM3MDJhZDQtNGI3YS00NzYzLTk5MDEtOTlmOGI0ZjAzOGIwLnBuZyIsIndpZHRoIjoiPD02MDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.2JrgW8AXhfVCeL3tOxOnIhsWLlL5MTuntOq0HfeK6CA">
+        </figure>
+    </nav>
+
+
+    <div class="tabs is-centered is-boxed is-large">
+      <ul>
+        <li>
+          <a href="http://localhost:8080/insertar">
+              <span class=""><i class="" aria-hidden="true"></i></span>
+            <span>Insertar</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="http://localhost:8080/borrar">
+              <span class=""><i class="" aria-hidden="true"></i></span>
+            <span>Borrar</span>
+          </a>
+        </li>
+
+        <li class="">
+          <a href="http://localhost:8080/modificar">
+              <span class=""><i class="" aria-hidden="true"></i></span>
+              <!--Liga para obtener el nombre de los iconos:
+                  https://fontawesome.com/icons?from=io
+                  <span class=""><i class="fas fas fa-fw fa-edit icon is-small" aria-hidden="true"></i></span>-->
+            <span>Modificar</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="http://localhost:8080/list">
+              <span class=""><i class="" aria-hidden="true"></i></span>
+            <span>Lista alumnos</span>
+          </a>
+        </li>
+
+     </ul>
+    </div>
+
+
+  </strong>
+
+</section>
+
+<!-- SECCION FORMULARIO -->
+
+<section class="hero is-bold is-family-monospace is-small">
+
+    <nav class="column is-half">
+    </nav>
+
+            <div class="tile is-ancestor">
+                <div class="tile is-vertical is-8">
+                  <div class="tile">
+                    <div class="tile is-parent is-vertical">
+                      <article class="tile is-child notification is-primary">
+                        <p class="title"></p>
+                        <p class="subtitle"></p>
+                      </article>
+
+                    <!-- MUESTRA FORMULARIO CON LOS DATOS DEL USUARIO SELECCIONADO -->                      
+                    </div>
+                    <div class="tile is-parent">
+                      <article class="tile is-child notification is-info">
+                        <p class="title">Estudiante.</p>
+
+                        <br>
+                        <label>Identificador:</label>
+                        <input type="text" class="input is-danger" readonly value="$result['id_alumno']">
+
+                        <br>
+                        <label>Matricula:</label>
+                        <input type="text" class="input is-danger" readonly value="$result['matricula']">
+
+                        <br>
+                        <label>Nombre:</label>
+                        <input type="text" class="input is-danger" readonly value="$result['nombre']">
+
+                        <br>
+                        <label>Primer Apellido:</label>
+                        <input type="text" class="input is-danger" readonly value="$result['primer_apellido']">
+
+                        <br>
+                        <label>Segundo Apellido:</label>
+                        <input type="text" class="input is-danger" readonly value="$result['segundo_apellido']">
+
+                        <br>
+                        <label>Edad:</label>
+                        <input type="text" class="input is-danger" readonly value="$result['edad']">
+
+                        <br>
+                        <label>Nacimiento:</label>
+                        <input type="text" class="input is-danger" readonly value="$result['fecha_nacimiento']">
+
+                        <br>
+                        <label>Sexo:</label>
+                        <input type="text" class="input is-danger" readonly value="$result['sexo']">
+
+                        <br>
+                        <label>Estado Civil:</label>
+                        <input type="text" class="input is-danger" readonly value="$result['estado']">
+                        <br>
+
+                        <figure class="image is-4by3">
+                    
+                          <img src="https://images.pexels.com/photos/1454360/pexels-photo-1454360.jpeg?auto=compress&cs=tinysrgb&h=650&w=940">                
+                        </figure>
+                      </article>
+                    </div>
+                  </div>
+
+                  
+                </div>
+                <div class="tile is-parent">
+                  <article class="tile is-child notification is-primary">
+                    <div class="content">
+                      <p class="title"></p>
+                      <p class="subtitle"></p>
+                      <div class="content">
+                        <!-- Content -->
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </div>           
+
+
+              <nav class="column is-half">
+            </nav>
+</section>
+
+<!-- BOTON REGRESAR -->
+
+<a href="http://localhost:8080/index"><button class="button is-warning is-focused is-large"
+    type="button">Regresar</button></a>
+
+
+<!-- PIE DE PAGINA, COLOR: CORAL -->
+
+<footer class="footer" style="background-color: coral;">
+    <nav class="content is-fullwidth has-text-centered">
+        <!-- CONTENIDO CENTRADO -->
+
+        <p>
+            <strong class="has-text-weight">Kaplan</strong>
+            <br>
+
+            <!-- HIPERVINCULO HACIA LA PAGINA OFICIAL DE BULMA -->
+
+            <a class="has-text-weight-bold has-text-white" href="https://bulma.io/"> Creado con Bulma.</a>
+        </p>
+    </nav>
+</footer>
+
+</html>
